@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import './App.css';
+import Preguntas from './Preguntas';
 import './App.css';
 
+const preguntasYRespuestas = [
+  {
+      id:1,
+      pregunta: "Is this a good product?",
+      respuesta: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facere in labore maxime, assumenda iure sed tenetur alias omnis eveniet similique laborum, neque porro unde ducimus officiis animi vitae! Quidem."
+  },
+  {
+      id:2,
+      pregunta: "How much does it cost?",
+      respuesta: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facere in labore maxime, assumenda iure sed tenetur alias omnis eveniet similique laborum, neque porro unde ducimus officiis animi vitae! Quidem."
+  },
+  {
+      id:3,
+      pregunta: "When can I get it?",
+      respuesta: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facere in labore maxime, assumenda iure sed tenetur alias omnis eveniet similique laborum, neque porro unde ducimus officiis animi vitae! Quidem."
+  },
+  {
+      id:4,
+      pregunta: "adadafsdisosfadofsa?",
+      respuesta: "dasdassdadasasasdaasdasdasasdasdasaDadaD"
+  }
+]
+
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>PREGUNTAS FRECUENTES</h1>
+      {preguntasYRespuestas.map(preguntas=> <Preguntas pregunta={preguntas.pregunta} respuesta={preguntas.respuesta} id={preguntas.id}/>)}
     </div>
   );
 }
